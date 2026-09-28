@@ -1,3 +1,149 @@
+HR Data Cleaning & Statistical Analysis
+
+📌 Project Overview
+
+This project performs Data Cleaning, Exploratory Data Analysis (EDA), and Statistical Analysis on the IBM HR Analytics Employee Attrition & Performance dataset.
+
+The dataset contains information about employee demographics, job characteristics, compensation, satisfaction, work experience, and employee attrition.
+
+The main objective is to understand the structure and quality of the data, identify meaningful patterns and potential anomalies, and statistically examine relationships between employee characteristics and attrition.
+
+This project was completed as part of the CodeAlpha Data Analytics Internship — Task 2: Exploratory Data Analysis (EDA).
+
+---
+
+🎯 Project Objectives
+
+- Understand the structure and characteristics of the dataset.
+- Inspect data types and basic statistical summaries.
+- Check for missing values and duplicate records.
+- Detect invalid or potentially problematic values.
+- Remove unnecessary and constant columns.
+- Define meaningful business questions before analysis.
+- Explore employee attrition across different variables.
+- Analyze relationships between numerical and categorical variables.
+- Perform statistical hypothesis testing.
+- Detect potential outliers using the IQR method.
+- Prepare a cleaned dataset for further analysis and visualization.
+
+---
+
+🗂️ Dataset Overview
+
+The dataset contains:
+
+- 1,470 employee records
+- 35 columns before cleaning
+- Demographic information
+- Job and department information
+- Salary and income information
+- Employee satisfaction measures
+- Work experience information
+- Overtime status
+- Employee attrition status
+
+Target Variable
+
+"Attrition"
+
+- "Yes" → Employee left the company
+- "No" → Employee stayed with the company
+
+---
+
+🧹 Data Cleaning
+
+The following data quality checks were performed:
+
+Missing Values
+
+No missing values were found in the dataset.
+
+Total Missing Values: 0
+
+Duplicate Records
+
+No duplicate rows were found.
+
+Duplicate Rows: 0
+
+Invalid Values
+
+The analysis checked for invalid values in important numerical variables, including:
+
+- Age
+- Monthly Income
+- Daily Rate
+- Hourly Rate
+- Monthly Rate
+- Total Working Years
+- Years at Company
+
+No invalid values were detected according to the defined validation rules.
+
+Unnecessary Columns
+
+The following columns were removed:
+
+- "EmployeeCount"
+- "EmployeeNumber"
+- "Over18"
+- "StandardHours"
+
+These columns were removed because they were constant or served primarily as identifiers rather than useful analytical variables.
+
+After removing these columns:
+
+Remaining Columns: 31
+
+---
+
+❓ Research Questions
+
+The analysis was structured around the following questions:
+
+1. Is working overtime associated with employee attrition?
+2. Which department has the highest observed attrition rate?
+3. Do employees who leave differ in age from employees who stay?
+4. Do employees who leave have a different average monthly income?
+5. Which job roles have the highest observed attrition rates?
+6. Are there unusual patterns or potential anomalies in the dataset?
+
+---
+
+🧪 Statistical Analysis
+
+Several statistical tests were performed to investigate relationships with employee attrition.
+
+Welch's T-Test
+
+Welch's independent samples t-test was used to compare employees who stayed with employees who left across numerical variables.
+
+The following variables showed statistically significant differences at the 0.05 level:
+
+- Age
+- Monthly Income
+- Years at Company
+- Total Working Years
+- Distance From Home
+- Job Satisfaction
+- Work-Life Balance
+
+Statistical significance indicates that the observed group differences are unlikely to be explained by random sampling variation alone under the test assumptions. It does not establish causation.
+
+---
+
+Chi-Square Test of Independence
+
+Chi-square tests were used to examine relationships between categorical variables and employee attrition.
+
+The following variables showed statistically significant associations with attrition:
+
+- Department
+- Job Role
+- Overtime
+- Marital Status
+- Education Field
 "Gender" did not show a statistically significant association with attrition in this analysis.
 
 ---
